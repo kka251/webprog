@@ -39,7 +39,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
-    transition: 0.3s 600ms;
+    transition: 0.3s 500ms;
 }
 a:active {
     color: purple;
