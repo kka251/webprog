@@ -6,14 +6,16 @@ body {
 }
 
 header {
-    background-color: black; 
+    background-image: linear-gradient(to right, red, orange, yellow, green, aqua, blue, violet); 
     color: lightgreen;
     padding: 10px; 
     font-size: 16pt;
 }
 
+
+
 footer {
-    background-color: lightblue; 
+    background-image: linear-gradient(to right, red, orange, yellow, green, aqua, blue, violet);
     color: maroon; 
     font-family: Arial; 
     margin: 0px; 
@@ -32,6 +34,7 @@ a {
 a:visited {
     color: brown;
     background-color: blue;
+    
 }
 
 a:hover {
@@ -44,4 +47,5 @@ a:hover {
 a:active {
     color: purple;
     background-color: hotpink;
+    
 }
