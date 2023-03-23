@@ -24,6 +24,8 @@ footer {
 a {
     color: green;
     text-decoration: none;
+    text-shadow: 0px 1px 1px red ;
+    transition: 600ms 0.2s;
 
 }
 
@@ -37,6 +39,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
+    transition: 0.3s 600ms;
 }
 a:active {
     color: purple;
