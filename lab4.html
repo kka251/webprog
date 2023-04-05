@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="main.css">
     <style>
         div {
+            z-index: 2;
             margin: 20px;
             border: 1px solid;
             border-radius: 7px;
@@ -17,7 +18,22 @@
             height: 250px;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
+            background: cadetblue;
         }
+        .second {
+            z-index: 1;
+            left: 380px;
+            top: 120px;
+            position: fixed;
+        }
+        .second:hover {
+            z-index: 3;
+            left: 380px;
+            top: 120px;
+            position: fixed;
+        }
+
     </style>
 </head>
 
@@ -35,7 +51,7 @@
             половина всех историй и объяснений – не моего авторства, а товарища Шиллера. Однако вторая половина – моя. Это мне плюс.
         </div>
 
-        <div>
+        <div class="second">
             Ещё один важный момент: хотя это и учебник по финансовым рынкам, «Хулиномика» – не вполне научная книга, потому что, 
             во-первых, при сборе материалов я не записывал источники и далеко не всегда их указываю; во-вторых, привожу размышления в 
             безапелляционной манере – в науке это не comme il faut, – так что для читателей это всего лишь моё личное мнение; и, 
