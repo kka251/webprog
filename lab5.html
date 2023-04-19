@@ -6,14 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курилова Кристина Александровна, Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum () {
+            let a = 5155;
+            let b = 4829;
+            let result = a + b;
+            alert ('Сумма '+ a +' и '+ b +' равна ' + result);
+        }
+
+    </script>
+    <style>
+        .message {
+            height: auto;
+            width: auto;
+            background-color: beige;
+            border: 1px dashed;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
     <header >
         НГТУ, ФБ, Лабораторные работы
     </header>
     
     <main>
-        
+      <div class="message" onclick="showSum()">
+        Сколько будет 5155+4829?
+      </div>
+      <div class="message">
+        Узнать, кто автор страницы
+      </div>  
     </main>
     <footer>
         <hr> 
