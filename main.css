@@ -42,6 +42,9 @@ footer:hover {
     padding: 20px;
     font-size: 20pt
 }
+main {
+    margin: 10px 20px;
+}
 
 footer:active {
     color: whitesmoke;
