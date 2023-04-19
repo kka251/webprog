@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showSum () {
-            let a = 5155;
-            let b = 4829;
+            let inputA = document.getElementById ('numberA');
+            let inputB = document.getElementById ('numberB');
+            
+            let a = parseInt (inputA.value);
+            let b = parseInt (inputB.value);
             let result = a + b;
             alert ('Сумма '+ a +' и '+ b +' равна ' + result);
         }
         function showAuthor () {
-            let author = 'Автор страницы:\nКурилова Кристина Александровна\n Хорошего настроения!';
+            let author = 'Автор страницы:\nКурилова Кристина Александровна\nХорошего настроения!';
             alert (author);
         }
 
@@ -32,19 +35,21 @@
 </head>
 
 <body>
-    <header onclick="showAuthor()>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторные работы
     </header>
     
     <main>
-      <div class="message" onclick="showSum()">
-        Сколько будет 5155+4829?
+        <label>Первое число: <input type="number" value="5155" id="numberA"></label><br>
+        <label>Второе число: <input type="number" value="4829" id="numberB"></label><br>
+      <div class= "message" onclick="showSum()">
+        Найти сумму чисел
       </div>
       <div class="message" onclick="showAuthor()">
         Узнать, кто автор страницы
       </div>  
     </main>
-    <footer onclick="showAuthor()>
+    <footer onclick="showAuthor()">
         <hr> 
         &copy; Курилова Кристина, ФБИ-14, 2 курс, 2023
     </footer>
