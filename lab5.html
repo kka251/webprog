@@ -61,6 +61,26 @@
             output.style.border = borderN;
         }
 
+        function showKorzina() {
+            let banana = document.getElementById ('banana');
+            let orange = document.getElementById ('orange');
+            let grapefruit = document.getElementById ('grapefruit');
+            let kivi = document.getElementById ('kivi');
+            let ananas = document.getElementById ('ananas');
+
+            let banan = parseInt (banana.value);
+            let o = parseInt (orange.value);
+            let g = parseInt (grapefruit.value);
+            let k = parseInt (kivi.value);
+            let an = parseInt (ananas.value);
+
+            let result = 99 * banan + 60 * o + 120 * g + 89 * k + 129 * an;
+            alert ('Бананы ' + banan + ' кг ' + '\nАпельсины ' + o + ' кг ' + '\nГрейпфрукт ' + g + ' шт.' 
+            + '\nКиви ' + k + ' кг ' + '\nАнанас ' + o + ' шт. ' + '\nИтого: ' + result + ' руб.');
+    
+
+        }
+
     </script>
     <style>
         .message {
@@ -78,6 +98,32 @@
             padding-top: 20px;
             text-align: center;
         }
+
+        .korzina {
+            margin-top: 10px;
+            font-size: 30px;
+            border: 1px solid;
+            width: 300px;
+            height: 350px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .product {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .price {
+            border: 1px solid;
+            width: 100px;
+            height: 20px;
+            padding-top: 10px;
+            text-align: center;
+            background-color: beige;
+            font-size: 15px;
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -91,24 +137,49 @@
         <label>Второе число: <input type="number" value="4829" id="numberB"></label><br>
       
         <div class= "message" onclick="showSum()">Найти сумму чисел</div>
+        
+        <div class= "message" onclick="showRas()"> Найти разность чисел</div>
       
-      <div class= "message" onclick="showRas()"> Найти разность чисел</div>
-      
-      <div class= "message" onclick="showProiz()">Найти произведение чисел</div>
-      
-      <div class= "message" onclick="showDel ()">Найти деление чисел</div>
-      
-      <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div> 
-      
-      <div>
-        <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'black', 'white', 'dashed')">
-        <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'solid')">
-        <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'red', 'white', 'dashed')">
-        <input type="button" value="Кнопка 4"onclick="changeOutput(4, 'red', 'black', 'solid')">
-      </div>
+        <div class= "message" onclick="showProiz()">Найти произведение чисел</div>
 
-      <div id="output"></div>
-    </main>
+        <div class= "message" onclick="showDel ()">Найти деление чисел</div>
+
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div> 
+      
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'black', 'white', 'dashed')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'solid')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'red', 'white', 'dashed')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'red', 'black', 'solid')">
+        </div>
+
+        <div id="output"></div>
+
+
+        <div class="korzina">Корзина товаров
+
+        <div class="product">Бананы (99 руб/кг)</div>
+        <label><input type="number" value="0" id="banana"></label><br>
+
+        <div class="product">Апельсины (60 руб/кг)</div>
+        <label><input type="number" value="0" id="orange"></label><br>
+
+        <div class="product">Грейпфрут (120 руб/шт.)</div>
+        <label><input type="number" value="0" id="grapefruit"></label><br>
+
+        <div class="product">Киви (89 руб/кг)</div>
+        <label><input type="number" value="0" id="kivi"></label><br>
+
+        <div class="product">Ананас (129 руб/шт.)</div>
+        <label><input type="number" value="0" id="ananas"></label><br>
+
+        <div class="price" onclick="showKorzina()">Рассчитать</div>
+        
+        </div>
+        
+        </main>
+    
+    
     <footer onclick="showAuthor()">
         <hr> 
         &copy; Курилова Кристина, ФБИ-14, 2 курс, 2023
