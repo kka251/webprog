@@ -77,9 +77,11 @@
             let result = 99 * banan + 60 * o + 120 * g + 89 * k + 129 * an;
             alert ('Бананы ' + banan + ' кг ' + '\nАпельсины ' + o + ' кг ' + '\nГрейпфрукт ' + g + ' шт.' 
             + '\nКиви ' + k + ' кг ' + '\nАнанас ' + o + ' шт. ' + '\nИтого: ' + result + ' руб.');
-    
-
         }
+         function delKrugi (cifra) {
+            cifra = document.getElementById(cifra)
+            cifra.style.opacity = '0'
+         }
 
     </script>
     <style>
@@ -110,11 +112,13 @@
         }
 
         .product {
+            
             font-size: 15px;
             text-align: left;
         }
 
         .price {
+            font-weight: bold;
             border: 1px solid;
             width: 100px;
             height: 20px;
@@ -124,6 +128,20 @@
             font-size: 15px;
             display: inline-block;
         }
+
+        .krug {
+            font-weight: bold;
+            margin-top: 10px;
+            border: 1px solid;
+            border-radius: 550px;
+            width: 45px;
+            height: 30px;
+            padding-top: 15px;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        
     </style>
 </head>
 
@@ -174,9 +192,18 @@
         <label><input type="number" value="0" id="ananas"></label><br>
 
         <div class="price" onclick="showKorzina()">Рассчитать</div>
-        
         </div>
         
+        <div class="krug" id="1" style="background-color: aqua;" onclick= "delKrugi('1')">1</div>
+        <div class="krug" id="2" style="background-color: plum;" onclick= "delKrugi('2')">2</div>
+        <div class="krug" id="3" style="background-color: dodgerblue;" onclick="delKrugi('3')">3</div>
+        <div class="krug" id="4" style="background-color: greenyellow;" onclick="delKrugi('4')">4</div>
+        <div class="krug" id="5" style="background-color: rgb(183, 93, 105);" onclick="delKrugi('5')">5</div>
+        <div class="krug" id="6" style="background-color: rebeccapurple;" onclick="delKrugi('6')">6</div>
+        <div class="krug" id="7" style="background-color: peru;" onclick="delKrugi('7')">7</div>
+        <div class="krug" id="8" style="background-color: steelblue;" onclick="delKrugi('8')">8</div>
+        <div class="krug" id="9" style="background-color: hotpink;" onclick="delKrugi('9')">9</div>
+        <div class="krug" id="10" style="background-color: rgb(252, 197, 19);" onclick="delKrugi('10')">10</div>
         </main>
     
     
