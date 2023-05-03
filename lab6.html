@@ -26,6 +26,17 @@
             text-align: center;
             padding: 10px;
         }
+        .color {
+            border: 1px solid;
+            border-radius: 20px;
+            border-color: black;
+            background-color: red;
+            width: 300px;
+            margin: 10px auto;
+            text-align: center;
+            padding: 10px;
+            color: azure;
+        }
 
     </style>
     <script>
@@ -84,6 +95,33 @@
             screens [1].style.display = 'none';
             screens [0].style.display = 'block';
         }
+        
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'blue';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'голубой';
+                }
+            else if (div.style.backgroundColor == 'blue') {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'red';
+                document.getElementById('color-name').innerHTML = 'желтый';
+            }
+            else if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'purple';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'фиолетовый';
+            }
+            else if (div.style.backgroundColor == 'purple') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+            else {
+                div.style.backgroundColor = 'red';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+        }
     </script>
 </head>
 
@@ -134,6 +172,12 @@
                 <li>Смотрите результат, в случае неудачи повторите пункт 2 и 3</li>
                 <li>В случае победы, можете сыграть еще раз, нажав на соответсвующую кнопку</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">красный</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+
         </div>
         
     </main>
