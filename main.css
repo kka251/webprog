@@ -32,8 +32,15 @@ footer {
     font-family: Arial; 
     margin: 0px; 
     text-align: right; 
-    font-style: italic;
-}
+    font-style: italic;  
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    
+    }
+
 
 footer:hover {
     color: azure;
