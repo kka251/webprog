@@ -32,10 +32,23 @@
             border-color: black;
             background-color: red;
             width: 300px;
-            margin: 10px auto;
+            margin: 10px ;
             text-align: center;
             padding: 10px;
             color: azure;
+        }
+
+        .dvizh {
+            order: 1px solid;
+            border-radius: 20px;
+            border-color: black;
+            margin-left: 0px;
+            background-color: azure;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 150px;
+            cursor: pointer;
         }
 
     </style>
@@ -122,6 +135,21 @@
                 document.getElementById('color-name').innerHTML = 'красный';
             }
         }
+        function peredvizh () {
+            let per = document.getElementById ('abc');
+            per.style.position = 'absolute';
+            if (per.style.left == '0px') {
+                per.style.left = '1250px';
+                per.style.transition = '10s 1ms';
+                per.style.transform = 'rotate(4turn)';
+            }
+            else {
+                per.style.transform = 'rotate(-4turn)';
+                per.style.left = '0' + 'px';
+                per.style.transition = '10s 1ms';
+                }
+            }
+
     </script>
 </head>
 
@@ -177,9 +205,12 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name">красный</span><br>
             Сделайте двойной щелчок, чтобы сменить.
-
         </div>
         
+        <div class="dvizh" id="abc" style="left: 0px;" onclick="peredvizh()">
+            Щёлкни меня
+        </div>
+
     </main>
 
     <footer>
