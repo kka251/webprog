@@ -150,6 +150,18 @@
                 }
             }
 
+        function rasshir() {
+            let block = document.getElementById('qwe');
+            ablock = parseInt(block.offsetWidth);
+            ablock = ablock + 50;
+            if (ablock < 1000){
+                block.style.width = ablock + 'px';
+            }
+            else {
+                block.style.width = 100 + 'px';
+            }
+        }
+
     </script>
 </head>
 
@@ -208,6 +220,10 @@
         </div>
         
         <div class="dvizh" id="abc" style="left: 0px;" onclick="peredvizh()">
+            Щёлкни меня
+        </div>
+
+        <div class="dvizh" id="qwe" style="width: 100px; margin-top: 10px;" onclick="rasshir()">
             Щёлкни меня
         </div>
 
