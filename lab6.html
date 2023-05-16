@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курилова Кристина Александровна, Лабораторная 5</title>
+    <title>Курилова Кристина Александровна, Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
     <style>
         .game {
@@ -39,7 +39,7 @@
         }
 
         .dvizh {
-            order: 1px solid;
+            border: 1px solid;
             border-radius: 20px;
             border-color: black;
             margin-left: 0px;
@@ -52,7 +52,7 @@
         }
 
         .clothes{
-            order: 1px solid;
+            border: 1px solid;
             border-radius: 20px;
             border-color: black;
             margin-top: 10px;
@@ -66,6 +66,9 @@
         #wear {
             height: auto;
             width: 200px;
+        }
+        #abc {
+            position: relative;
         }
 
     </style>
@@ -154,16 +157,15 @@
         }
         function peredvizh () {
             let per = document.getElementById ('abc');
-            per.style.position = 'absolute';
             if (per.style.left == '0px') {
                 per.style.left = '1250px';
-                per.style.transition = '10s 1ms';
+                per.style.transition = '5s';
                 per.style.transform = 'rotate(4turn)';
             }
             else {
                 per.style.transform = 'rotate(-4turn)';
                 per.style.left = '0' + 'px';
-                per.style.transition = '10s 1ms';
+                per.style.transition = '5s';
                 }
             }
 
