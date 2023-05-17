@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курилова Кристина Александровна, Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
-    <style></style>
+    <style>
+        
+    </style>
     <script>
         function addBlocks(){
             let blocks = document.getElementById('blocks');
@@ -35,6 +37,16 @@
             let average = sum/exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addTransparentblock() {
+            let trblock = document.getElementById('transparent');
+            for (let i = 0; i < 10; i++) {
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + (i+1);
+                block.style.opacity = i/10;
+                trblock.appendChild(block);
+            }
+        }
     </script>
 </head>
 <body>
@@ -49,6 +61,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentblock()">Создать полупрозрачные блоки</button>
+        <div id="transparent"></div>
     </main>
     
     <footer>
