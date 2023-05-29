@@ -7,7 +7,23 @@
     <title>Курилова Кристина Александровна, Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            margin: 10px;
+            }
+            .red {
+            background-color: red;
+            }
+
+            .green {
+            background-color: green;
+            }
     </style>
     <script>
         function addBlocks(){
@@ -47,6 +63,23 @@
                 trblock.appendChild(block);
             }
         }
+        function createCircles() {
+            let circleCount = document.getElementById('circleCount').value;
+            let circlesContainer = document.getElementById('circlesContainer');
+            circlesContainer.innerHTML = '';
+            for (let i = circleCount; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.className = 'circle';
+                circle.innerHTML = i;
+                if (i % 2 == 0) {
+                    circle.classList.add('green');} 
+                else {
+                circle.classList.add('red');}
+                circlesContainer.appendChild(circle);
+            }}
+        function umnozhtb() {
+            
+        }
     </script>
 </head>
 <body>
@@ -64,6 +97,13 @@
 
         <button onclick="addTransparentblock()">Создать полупрозрачные блоки</button>
         <div id="transparent"></div>
+
+        <div>Введите количество кругов:</div><input type="number" id="circleCount">
+        <button onclick="createCircles()">Нажмите кнопку</button>
+        <div id="circlesContainer"></div>
+
+        <button onclick="umnozhtb()">Таблица умножения на 102</button>
+        <div id="umnozh"></div>
     </main>
     
     <footer>
