@@ -66,7 +66,6 @@
         function createCircles() {
             let circleCount = document.getElementById('circleCount').value;
             let circlesContainer = document.getElementById('circlesContainer');
-            circlesContainer.innerHTML = '';
             for (let i = circleCount; i > 0; i--) {
                 let circle = document.createElement('div');
                 circle.className = 'circle';
@@ -78,7 +77,12 @@
                 circlesContainer.appendChild(circle);
             }}
         function umnozhtb() {
-            
+            let umnozh = document.getElementById('umnozh');
+            for (let i = 13; i < 34; i++) {
+                let abc = document.createElement('div');
+                abc.innerHTML ='102 * ' + i + ' = ' + (i * 102);
+                umnozh.appendChild(abc);
+            }
         }
     </script>
 </head>
