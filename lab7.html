@@ -82,7 +82,43 @@
                 let abc = document.createElement('div');
                 abc.innerHTML ='102 * ' + i + ' = ' + (i * 102);
                 umnozh.appendChild(abc);
+            }}
+        function znach() {
+            let data = ['14:04','26-05-2023','25-05-2023','24-05-2023', '23-05-2023', '22-05-2023', '19-05-2023', '18-05-2023', '17-05-2023'
+            , '16-05-2023']; 
+            let dan = [0.00525,0.005355,0.005585,0.00528,0.00534,0.00521,0.005225,0.005125,0.00513,0.00549];
+            let tab = document.getElementById ('akz');
+            
+            for (let i = 0; i < data.length; i++) {
+                let tr = document.createElement ('tr');
+                let tdData = document.createElement('td');
+                tdData.innerHTML = data [i];
+                tr.appendChild (tdData);
+                let tdDan = document.createElement('td');
+                tdDan.innerHTML = dan [i];
+                tr.appendChild (tdDan);
+                let tdR = document.createElement('td');
+                if (i==0){
+                    tdR.innerHTML = '-';
+                }
+                else {
+                    tdR.innerHTML = (dan[i] - dan[i-1]).toFixed(5);
+                }
+                tr.appendChild(tdR);
+                tab.appendChild(tr)
             }
+            let min = Math.min(...dan);
+            document.getElementById('minimum').innerHTML = "Минимальное значение: " + min;
+            let max = Math.max(...dan);
+            document.getElementById('maximum').innerHTML = "Максимальное значение: " + max;
+            
+            let sum = 0;
+            for (let i = 0; i < dan.length; i++) {
+                sum = sum + dan [i];
+            }
+            let average = sum/dan.length;
+            document.getElementById('srz').innerHTML = 'Среднее значение: ' + average;
+            
         }
     </script>
 </head>
@@ -108,6 +144,13 @@
 
         <button onclick="umnozhtb()">Таблица умножения на 102</button>
         <div id="umnozh"></div>
+
+        <button onclick="znach()">Курс акций "ТГК-2"</button>
+        <table border="1" id="akz"></table>
+        <div id="minimum"></div>
+        <div id="maximum"></div>
+        <div id="srz"></div>
+
     </main>
     
     <footer>
