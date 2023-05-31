@@ -1,3 +1,9 @@
+function showTime(){
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime
+}
+setInterval(showTime, 1000)
 function showDate() {
     let out = document.getElementById('current-date');
     let today = new Date();
